@@ -3,15 +3,6 @@
 
 This is a full-featured, responsive agency website built using **Django 5** and **Bootstrap 5**. It includes a dynamic blog, service sections, contact form, and admin panel — perfect for digital agencies, freelancers, or personal portfolios.
 
----
-
-## 📸 Screenshots
-
-![Homepage Screenshot](link-to-screenshot.png)  
-*Replace with actual screenshot of homepage or sections*
-
----
-
 ## 🚀 Features
 
 - 🔥 Modern responsive UI with Bootstrap 5
