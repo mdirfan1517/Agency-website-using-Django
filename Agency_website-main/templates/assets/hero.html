@@ -1,0 +1,38 @@
+{% load static %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero">
+  <div class="container position-relative">
+    <div class="row gy-5" data-aos="fade-in">
+      
+      <!-- Text and Image Column (Centered vertically) -->
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+        
+        <!-- Flex container to align image and text side by side -->
+        <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-4">
+          <!-- Image with rounded circle -->
+          <img src="{% static 'assets/img/logos/logos.jpg' %}" alt="Company Logo" class="rounded-circle" style="width: 480px; height: 300px; margin-right: 20px; filter: brightness(1.2); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border: 2px solid #fff;">
+          
+          <!-- Company Name -->
+          <h2>Welcome to <span>{{company_name}}</span></h2>
+        </div>
+
+        <!-- Additional Description -->
+        <p>Empowering Success, Inspiring Growth: Your Vision, Our Expertise.</p>
+
+        <!-- Call to Actions -->
+        <div class="d-flex justify-content-center justify-content-lg-start">
+          <a href="#services" class="btn-get-started">Get Started</a>
+          <a href="{{video_url}}" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="col-lg-6 order-1 order-lg-2">
+        <img src="{% static 'assets/img/hero-img.svg' %}" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Hero Section -->
