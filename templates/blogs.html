@@ -1,0 +1,245 @@
+{% extends 'assets/main.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% block mainContent%}
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('{% static 'assets/img/breadcrumbs-bg.jpg' %}');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>Blog</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Blog</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-4">
+          {% for blog in blogs %}
+            <div class="col-lg-4 col-md-6">
+              <article class="blog-card">
+                <div class="post-img">
+                  {% if blog.blog_image %}
+                      <img src="{{ blog.blog_image }}" alt="{{ blog.title }}" class="img-fluid">
+                  {% else %}
+                      <img src="{% static 'assets/img/blog/blog-1.jpg' %}" alt="Default Blog Image" class="img-fluid">
+                  {% endif %}
+                </div>
+
+                <div class="blog-content">
+                  <h2 class="title">
+                    <a href="{% url 'blog_detail' blog_id=blog.id %}">{{ blog.title }}</a>
+                  </h2>
+
+                  <div class="meta-top">
+                    <ul class="list-unstyled d-flex flex-wrap gap-3">
+                      <li class="d-flex align-items-center">
+                        <i class="bi bi-person"></i>
+                        <a href="#" class="ms-2">{{ blog.author.first_name }} {{ blog.author.last_name }}</a>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <i class="bi bi-clock"></i>
+                        <a href="#" class="ms-2"><time datetime="{{ blog.created_at|date:'Y-m-d' }}">{{ blog.created_at|date:"F j, Y" }}</time></a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="content">
+                    <p>{{ blog.summary|truncatechars:150 }}</p>
+                  </div>
+
+                  <div class="read-more">
+                    <a href="{% url 'blog_detail' blog_id=blog.id %}">Read More</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Pagination -->
+        {% if blogs.has_other_pages %}
+        <div class="blog-pagination mt-4">
+          <ul class="justify-content-center">
+            {% if blogs.has_previous %}
+              <li><a href="?page={{ blogs.previous_page_number }}"><i class="bi bi-chevron-left"></i></a></li>
+            {% endif %}
+
+            {% for num in blogs.paginator.page_range %}
+              {% if blogs.number == num %}
+                <li class="active"><a href="#">{{ num }}</a></li>
+              {% else %}
+                <li><a href="?page={{ num }}">{{ num }}</a></li>
+              {% endif %}
+            {% endfor %}
+
+            {% if blogs.has_next %}
+              <li><a href="?page={{ blogs.next_page_number }}"><i class="bi bi-chevron-right"></i></a></li>
+            {% endif %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </section>
+
+    <style>
+        .blog-card {
+            background: #fff;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        .post-img {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/9;
+        }
+
+        .post-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .post-img img {
+            transform: scale(1.05);
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .title {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .title a {
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .title a:hover {
+            color: var(--primary-color);
+        }
+
+        .meta-top ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .meta-top li {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .meta-top a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .meta-top a:hover {
+            color: var(--primary-color);
+        }
+
+        .content {
+            margin: 1rem 0;
+            color: var(--secondary-color);
+        }
+
+        .read-more {
+            margin-top: 1rem;
+        }
+
+        .read-more a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .read-more a:hover {
+            color: #0056b3;
+        }
+
+        .blog-pagination {
+            margin-top: 2rem;
+        }
+
+        .blog-pagination ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 0.5rem;
+        }
+
+        .blog-pagination li {
+            margin: 0 0.25rem;
+        }
+
+        .blog-pagination a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            background: #fff;
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        .blog-pagination a:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .blog-pagination li.active a {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .blog-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .blog-content {
+                padding: 1.25rem;
+            }
+
+            .meta-top ul {
+                flex-direction: column;
+                gap: 0.5rem !important;
+            }
+        }
+    </style>
+{% endblock %}

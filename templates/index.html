@@ -1,0 +1,413 @@
+{% extends 'assets/main.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% block mainContent%}
+    
+
+    <!-- ======= Our Services Section ======= -->
+    <section id="services" class="services sections-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p>Comprehensive Digital Solutions for Your Business</p>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <h3>Digital Marketing</h3>
+              <p>Strategic marketing solutions including SEO, SEM, social media marketing, and content marketing to boost your online presence.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3>Web Development</h3>
+              <p>Custom website development, e-commerce solutions, and web applications built with the latest technologies.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <h3>Brand Design</h3>
+              <p>Creative branding solutions including logo design, brand identity, and visual communication strategies.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-phone"></i>
+              </div>
+              <h3>Mobile App Development</h3>
+              <p>Native and cross-platform mobile applications for iOS and Android devices with modern UI/UX design.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <h3>Business Strategy</h3>
+              <p>Data-driven business strategies and market analysis to help you make informed decisions and grow your business.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-camera-video"></i>
+              </div>
+              <h3>Content Creation</h3>
+              <p>Professional content creation including video production, photography, and copywriting for your marketing needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Client Success Stories</h2>
+          <p>What Our Clients Say About Our Services</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img src="{% static 'assets/img/testimonials/testimonials-1.png' %}" class="testimonial-img flex-shrink-0" alt="Rajesh Kumar">
+                    <div>
+                      <h3>Arun Raj K.S</h3>
+                      <h4>CEO, Chennai Tech Solutions</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Irfan Tech Solutions transformed our digital presence with their innovative approach. Their team's expertise in web development and digital marketing helped us achieve remarkable growth in the Tamil Nadu market.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img src="{% static 'assets/img/testimonials/testimonials-2.png' %}" class="testimonial-img flex-shrink-0" alt="Priya Sundaram">
+                    <div>
+                      <h3>Gokula Siva K.S</h3>
+                      <h4>Marketing Director, Coimbatore Digital</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Their mobile app development team delivered an exceptional solution that perfectly catered to our local market needs. The attention to Tamil language integration and cultural nuances was outstanding.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <div class="d-flex align-items-center">
+                    <img src="{% static 'assets/img/testimonials/testimonials-3.png' %}" class="testimonial-img flex-shrink-0" alt="Arun Balaji">
+                    <div>
+                      <h3>Mathesh M</h3>
+                      <h4>Founder, Madurai E-Commerce</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    The e-commerce platform they developed for us has revolutionized our business in Tamil Nadu. Their understanding of local market dynamics and digital trends is truly impressive.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FAQ Section ======= -->
+    <section id="faq" class="faq sections-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Find answers to common questions about our services</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="content px-xl-5">
+              <h3>Common <strong>Questions</strong></h3>
+              <p>
+                Get quick answers to frequently asked questions about our digital agency services, processes, and solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    <span class="num">1.</span>
+                    What services does Irfan Tech Solutions offer?
+                  </button>
+                </h3>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    We offer a comprehensive range of digital services including web development, mobile app development, digital marketing, brand design, business strategy, and content creation. Our team provides end-to-end solutions tailored to your business needs.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    <span class="num">2.</span>
+                    How long does it take to complete a project?
+                  </button>
+                </h3>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Project timelines vary depending on the scope and complexity. A basic website might take 2-4 weeks, while a complex web application could take 2-3 months. We'll provide a detailed timeline during our initial consultation.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    <span class="num">3.</span>
+                    What is your pricing structure?
+                  </button>
+                </h3>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Our pricing is project-based and depends on your specific requirements. We offer competitive rates and can work with various budgets. Contact us for a detailed quote tailored to your needs.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                    <span class="num">4.</span>
+                    Do you provide ongoing support after project completion?
+                  </button>
+                </h3>
+                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    Yes, we offer various maintenance and support packages to ensure your digital solutions continue to perform optimally. Our team is always available for updates, improvements, and technical support.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
+                    <span class="num">5.</span>
+                    How do you ensure the quality of your work?
+                  </button>
+                </h3>
+                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    We follow industry best practices and maintain strict quality control processes. Our team conducts thorough testing, code reviews, and quality assurance checks before delivering any project. We also gather client feedback throughout the development process.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-posts" class="recent-posts sections-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Latest Insights</h2>
+          <p>Stay Updated with Digital Marketing Trends and Tips</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-xl-4 col-md-6">
+            <article>
+              <div class="post-img">
+                <img src="{% static 'assets/img/blog/blog-1.jpg' %}" alt="AI in Digital Marketing" class="img-fluid">
+              </div>
+              <p class="post-category">AI & Automation</p>
+              <h2 class="title">
+                <a href="{% url 'blog_detail' blog_id=8 %}">The Rise of AI in Digital Marketing: 2024 Trends</a>
+              </h2>
+              <div class="d-flex align-items-center">
+                <div class="post-meta">
+                  <p class="post-author">Irfan Rizwan</p>
+                  <p class="post-date">
+                    <time datetime="2024-03-14">March 14, 2024</time>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-4 col-md-6">
+            <article>
+              <div class="post-img">
+                <img src="{% static 'assets/img/blog/blog-2.jpg' %}" alt="Progressive Web Apps" class="img-fluid">
+              </div>
+              <p class="post-category">Web Development</p>
+              <h2 class="title">
+                <a href="{% url 'blog_detail' blog_id=7 %}">Progressive Web Apps: The Future of Mobile Experience</a>
+              </h2>
+              <div class="d-flex align-items-center">
+                <div class="post-meta">
+                  <p class="post-author">Irfan Rizwan</p>
+                  <p class="post-date">
+                    <time datetime="2024-03-12">March 12, 2024</time>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-xl-4 col-md-6">
+            <article>
+              <div class="post-img">
+                <img src="{% static 'assets/img/blog/blog-3.jpg' %}" alt="Metaverse Marketing" class="img-fluid">
+              </div>
+              <p class="post-category">Digital Strategy</p>
+              <h2 class="title">
+                <a href="{% url 'blog_detail' blog_id=3 %}">Metaverse Marketing: Opportunities for Businesses</a>
+              </h2>
+              <div class="d-flex align-items-center">
+                <div class="post-meta">
+                  <p class="post-author">Irfan Rizwan</p>
+                  <p class="post-date">
+                    <time datetime="2024-03-10">March 10, 2024</time>
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Get in Touch</h2>
+          <p>Let's Discuss Your Project</p>
+        </div>
+
+        <div class="row gx-lg-0 gy-4">
+          <div class="col-lg-4">
+            <div class="info-container d-flex flex-column align-items-center justify-content-center">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>27/3, KK nagar, Madurai, Tamil nadu, 625020</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>irfanrizwan1517@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p> +91 8695 3282 92</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-clock flex-shrink-0"></i>
+                <div>
+                  <h4>Open Hours:</h4>
+                  <p>Mon-Sat: 9AM - 6PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <form action="{% url 'contact_form'%}" method="post" role="form" class="php-email-form">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock mainContent%}
